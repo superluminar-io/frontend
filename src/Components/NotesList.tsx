@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { listNotes } from "../services/notes";
 import { NotesItem } from "./NotesItem";
 
 const notes = [
@@ -19,6 +21,14 @@ const notes = [
 ];
 
 export const NotesList: React.FunctionComponent = () => {
+  const [newNotes, setNotes] = useState<any>([]);
+
+  useEffect(() => {
+    const apiNotes = listNotes();
+    setNotes(apiNotes);
+    console.log(apiNotes);
+  }, []);
+
   return (
     <>
       {notes.map((note) => (
