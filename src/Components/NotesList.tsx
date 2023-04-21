@@ -6,9 +6,8 @@ export const NotesList: React.FunctionComponent = () => {
   const [notes, setNotes] = useState<any>([]);
 
   const fetchData = async () => {
-    const apiNotes = await listNotes();
-    setNotes(apiNotes);
-    console.log(apiNotes);
+    const currentNotes = await listNotes();
+    setNotes(currentNotes);
   };
 
   useEffect(() => {
