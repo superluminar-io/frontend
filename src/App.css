@@ -2,48 +2,65 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 2em;
   text-align: center;
   line-height: 1.5;
-  background-color: #282c34;
-  color: #ccc;
+  background-color: #211d2b;
+  background-image: radial-gradient(#23202b,#2e191f);
+  color: white;
 }
 
 header {
+  display: flex;
+  align-items: center;
+  Justify-content: space-between;
   margin-bottom: 2em;
   font-size: 2em;
- }
+}
 
- div {
+img {
+  width: 10rem;
+}
+
+div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2em;
- }
+}
 
- label {
+label {
   margin-bottom: 0.5em;
   font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 input,
 button {
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   margin-bottom: 2em;
   border-radius:  0.5em;
 }
 
 input {
-  width: 80%;
-  background-color: #ccc;
+  background-color: white;
+}
+
+input:focus{
+  outline: none;
 }
 
 button {
   background-color: transparent;
-  color: #ccc;
-  border: 1px solid #ccc;
+  color: white;
+  border: 1px solid white;
   font-size: inherit;
 }
 
@@ -52,14 +69,14 @@ li > button {
 }
 
 button:hover {
-  background-color: #ccc;
+  background-color: white;
   color: #282c34;
 }
 
 .notes-item {
   margin: 1.5em auto;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 0.5em;
   width: 80%;
 }
@@ -67,4 +84,5 @@ button:hover {
 .delete-button {
   margin-top: 1em;
   margin-bottom: 0;
+  border: none;
 }
