@@ -1,18 +1,16 @@
 import { Note } from "../types";
 
-export interface NotesItemProps {
-  //   noteDetails: Note;
-  title: string;
-  // date: string;
+interface NotesItemProps {
+  note: Note;
 }
 
 export const NotesItem: React.FunctionComponent<NotesItemProps> = ({
-  title,
+  note,
 }) => {
   return (
     <div className="notes-item">
-      <p>{title}</p>
-      {/* <span>{date}</span> */}
+      <h3>{note.title}</h3>
+      <p>{note.content}</p>
       <button className="delete-button">🗑️</button>
     </div>
   );
