@@ -14,9 +14,9 @@ body {
 }
 
 .navbar {
+  margin-bottom: 1em;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2em;
   font-size: 2em;
 }
 
@@ -26,9 +26,17 @@ img {
 
 form {
   margin: 0 auto;
+  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
-  max-width: 20em;
+  width: 80%;
+}
+
+@media screen and (min-width: 1028px) {
+  form {
+    width: 50%;
+    margin-bottom: 2em;
+  }
 }
 
 input,
@@ -67,16 +75,21 @@ button:hover {
 .notes-list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .notes-item {
-  margin: 0.5em auto;
-  padding: 0.5em;
-  width: 12em; 
+  margin: 1em;
+  padding: 0.7em;
+  width: 15em; 
   height: 12em; 
-  background-color: white;
-  color: black;
+  border: 1px solid white;
+  border-radius:  0.5em;
+  border-radius: 0,25;
+  color: white;
   position: relative;
 }
 
@@ -86,8 +99,6 @@ button:hover {
 
 .note-content {
   margin-top: 0;
-  font-family: 'Reenie Beanie';
-  font-size: large;
 }
 
 .note-delete-button {
@@ -97,4 +108,10 @@ button:hover {
   margin: 0;
   border: none;
   display: flex;
+}
+
+.note-delete-button:hover {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.4);
 }

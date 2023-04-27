@@ -9,7 +9,7 @@ export const NotesItem: React.FunctionComponent<NotesItemProps> = ({
 }) => {
   return (
     <div className="notes-item">
-      <h3 className="note-header">{note.title}</h3>
+      <h4 className="note-header">{note.title}</h4>
       <p className="note-content">{note.content}</p>
       <button className="note-delete-button">🗑️</button>
     </div>

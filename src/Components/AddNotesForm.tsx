@@ -22,28 +22,30 @@ const AddNotesForm: React.FunctionComponent = () => {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <h3>New Note</h3>
-      <input
-        name="title"
-        type="text"
-        placeholder="Title"
-        required
-        value={state.title}
-        onChange={(e) => handleChange(e)}
-      />
+    <>
+      <h2>New Note</h2>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input
+          name="title"
+          type="text"
+          placeholder="Title"
+          required
+          value={state.title}
+          onChange={(e) => handleChange(e)}
+        />
 
-      <input
-        name="content"
-        type="text"
-        placeholder="Content"
-        required
-        value={state.content}
-        onChange={(e) => handleChange(e)}
-      />
+        <input
+          name="content"
+          type="text"
+          placeholder="Content"
+          required
+          value={state.content}
+          onChange={(e) => handleChange(e)}
+        />
 
-      <button>Add note</button>
-    </form>
+        <button>Add note</button>
+      </form>
+    </>
   );
 };
 
