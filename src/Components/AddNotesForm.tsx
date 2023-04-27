@@ -23,20 +23,20 @@ const AddNotesForm: React.FunctionComponent = () => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
-      <label>What do you want to add to your list?</label>
-      <label>Title</label>
+      <h3>New Note</h3>
       <input
         name="title"
         type="text"
+        placeholder="Title"
         required
         value={state.title}
         onChange={(e) => handleChange(e)}
       />
 
-      <label>Content</label>
       <input
         name="content"
         type="text"
+        placeholder="Content"
         required
         value={state.content}
         onChange={(e) => handleChange(e)}

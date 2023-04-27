@@ -5,8 +5,9 @@ import AddNotesForm from "./Components/AddNotesForm";
 import { NotesList } from "./Components/NotesList";
 import { Note } from "./types";
 import { listNotes } from "./services/notes";
+import { Navbar } from "./Components/Navbar";
 
-function App() {
+const App: React.FunctionComponent = () => {
   const [notes, setNotes] = useState<Note[]>([]);
 
   const fetchData = async () => {
@@ -17,17 +18,14 @@ function App() {
   useEffect(() => {
     fetchData();
   }, [notes]);
-  
+
   return (
-    <main style={{ width: "100%" }}>
-      <header style={{ width: "100%" }}>
-        <img src="logo.png" alt="logo" />
-        <h3>Notes app</h3>
-      </header>
+    <>
+      <Navbar />
       <AddNotesForm />
       <NotesList notes={notes} />
-    </main>
+    </>
   );
-}
+};
 
 export default App;
