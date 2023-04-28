@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import AddNotesForm from "./Components/AddNotesForm";
-
-import { NotesList } from "./Components/NotesList";
-import { Note } from "./types";
+import { useEffect, useState } from "react";
 import { listNotes } from "./services/notes";
+import { Note } from "./types";
+
 import { Navbar } from "./Components/Navbar";
-import { Footer } from "./Components/Footer";
+import { AddNotesForm } from "./Components/AddNotesForm";
 import { Divider } from "./Components/Divider";
+import { NotesList } from "./Components/NotesList";
+import { Footer } from "./Components/Footer";
+
 
 const App: React.FunctionComponent = () => {
   const [notes, setNotes] = useState<Note[]>([]);

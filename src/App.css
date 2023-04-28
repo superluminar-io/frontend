@@ -33,24 +33,30 @@ form {
 }
 
 input,
-button {
+button,
+textarea {
   padding: 0.5em;
   border: 1px solid white;
   margin-bottom: 2em;
   border-radius:  0.5em;
+  font: inherit;
 }
 
 input {
   background-color: white;
 }
 
-input:focus{
+input:focus, textarea:focus {
   outline: none;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: #6c6d6e;
   text-align: center;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
@@ -58,7 +64,7 @@ button {
   color: white;
   border: 1px solid white;
   padding: 0.5em 1em;
-  font-size: inherit;
+  /* font-size: inherit; */
   width: fit-content;
   align-self: center;
 }
@@ -102,6 +108,10 @@ button:hover {
 
 .note-content {
   margin-top: 0;
+  text-overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .note-delete-button {

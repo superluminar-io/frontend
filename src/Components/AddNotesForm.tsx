@@ -3,13 +3,15 @@ import { useState } from "react";
 import { createNote } from "../services/notes";
 import { Note } from "../types";
 
-const AddNotesForm: React.FunctionComponent = () => {
+export const AddNotesForm: React.FunctionComponent = () => {
   const [state, setState] = useState<Note>({
     title: "",
     content: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
@@ -34,11 +36,12 @@ const AddNotesForm: React.FunctionComponent = () => {
           onChange={(e) => handleChange(e)}
         />
 
-        <input
+        <textarea
           name="content"
-          type="text"
           placeholder="Content"
           required
+          rows={3}
+          maxLength={90}
           value={state.content}
           onChange={(e) => handleChange(e)}
         />
@@ -48,5 +51,3 @@ const AddNotesForm: React.FunctionComponent = () => {
     </>
   );
 };
-
-export default AddNotesForm;
