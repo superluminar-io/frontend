@@ -6,6 +6,7 @@ import { NotesList } from "./Components/NotesList";
 import { Note } from "./types";
 import { listNotes } from "./services/notes";
 import { Navbar } from "./Components/Navbar";
+import { Footer } from "./Components/Footer";
 
 const App: React.FunctionComponent = () => {
   const [notes, setNotes] = useState<Note[]>([]);
@@ -24,6 +25,7 @@ const App: React.FunctionComponent = () => {
       <Navbar />
       <AddNotesForm />
       <NotesList notes={notes} />
+      <Footer />
     </>
   );
 };

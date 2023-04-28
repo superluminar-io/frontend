@@ -115,3 +115,14 @@ button:hover {
   color: white;
   transform: scale(1.4);
 }
+
+.footer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  background-image: url("../public/stars.png");
+  background-position: top center;
+}
