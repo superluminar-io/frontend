@@ -1,9 +1,14 @@
 import React, { FormEvent, ChangeEvent } from "react";
 import { useState } from "react";
-import { createNote } from "../services/notes";
 import { Note } from "../types";
 
-export const AddNotesForm: React.FunctionComponent = () => {
+interface AddNotesFormProps {
+  createNote: (note: Note) => void;
+}
+
+export const AddNotesForm: React.FunctionComponent<AddNotesFormProps> = ({
+  createNote,
+}) => {
   const [state, setState] = useState<Note>({
     title: "",
     content: "",
